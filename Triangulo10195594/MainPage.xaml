@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:Triangulo10195594.ViewModel"
+             x:Class="Triangulo10195594.MainPage"
+             Title="Ejercicio 2: Area del Triangulo">
+    <ContentPage.BindingContext>
+        <viewmodel:MainViewModel></viewmodel:MainViewModel>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+
+            <Label Text="Digite el primer lado del triangulo"/>
+            <Entry Text="{Binding Lado1}"/>
+
+            <Label Text="Digite el segundo lado del triangulo"/>
+            <Entry Text="{Binding Lado2}"/>
+
+            <Label Text="Digite el tercer lado del triangulo"/>
+            <Entry Text="{Binding Lado3}"/>
+
+            <Label Text="Suma Total"/>
+            <Entry Text="{Binding AreaTot}"/>
+
+            <Button Text="Calcular area" Command="{Binding TrianguloAreaCommand}"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
